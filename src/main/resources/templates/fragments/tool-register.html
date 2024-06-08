@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Register Tool</title>
 </head>
 <body>
-$END$
+<h1>Register Tool</h1>
+<form action="#" th:action="@{/tools/register}" method="post">
+    <div>
+        <label for="name">Tool Name:</label>
+        <input type="text" id="name" name="name"/>
+    </div>
+    <div>
+        <label for="currentSituation">Current Situation:</label>
+        <input type="text" id="currentSituation" name="currentSituation"/>
+    </div>
+    <div>
+        <label for="certificationDate">Certification Date:</label>
+        <input type="date" id="certificationDate" name="certificationDate"/>
+    </div>
+    <div>
+        <label for="expireDate">Expire Date:</label>
+        <input type="date" id="expireDate" name="expireDate"/>
+    </div>
+    <div>
+        <button type="submit">Register Tool</button>
+    </div>
+</form>
 </body>
 </html>
